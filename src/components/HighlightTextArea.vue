@@ -109,7 +109,9 @@ export default {
         }
         let container = this.$refs.textarea.$el.querySelector('.CodeMirror-code .CodeMirror-line [role=presentation]')
         for (let char of container.children) {
-          char.classList.add(char.classList[char.classList.length - 1].split('-')[0] + '-master')
+          if (char.classList[char.classList.length - 1]) {
+            char.classList.add(char.classList[char.classList.length - 1].split('-')[0] + '-master')
+          }
         }
       })
     },
