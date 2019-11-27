@@ -114,11 +114,15 @@ export default {
     }
   }),
   mounted () {
-    if (localStorage.getItem('distiller_patterns')) {
-      this.distillerPatterns = localStorage.getItem('distiller_patterns')
-    }
-    if (localStorage.getItem('distiller_text')) {
-      this.sampleData = localStorage.getItem('distiller_text')
+    if (localStorage.getItem('distiller_patterns') || localStorage.getItem('distiller_text')) {
+      if (confirm('Do you want to restore the entities and input text from the previously stored session?')) {
+        if (localStorage.getItem('distiller_patterns')) {
+          this.distillerPatterns = localStorage.getItem('distiller_patterns')
+        }
+        if (localStorage.getItem('distiller_text')) {
+          this.sampleData = localStorage.getItem('distiller_text')
+        }
+      }
     }
   },
   watch: {
