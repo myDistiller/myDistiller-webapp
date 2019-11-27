@@ -179,7 +179,7 @@ export default {
         tmp.root[key] = { [key]: [] }
         tmp.root[key].entry = this.jsonOutput[key]
       })
-      return convert.js2xml(tmp, { compact: true, spaces: 4 })
+      return convert.js2xml(tmp, { compact: true, spaces: 4, trim: true })
     },
     highlightedDistillerElements () {
       if (!this.error) return this.highlightDataDistiller
