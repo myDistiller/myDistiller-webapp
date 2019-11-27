@@ -188,12 +188,21 @@ export default {
     },
     highlightedDistillerElements () {
       if (!this.error) return this.highlightDataDistiller
-      return [...this.highlightDataDistiller, {
-        line: this.error.line - 1,
-        startIndex: this.error.col - 2,
-        endIndex: this.error.col - 1,
-        class: 'error'
-      }]
+      if (Array.isArray(this.highlightDataDistiller)) {
+        return [...this.highlightDataDistiller, {
+          line: this.error.line - 1,
+          startIndex: this.error.col - 2,
+          endIndex: this.error.col - 1,
+          class: 'error'
+        }]
+      } else {
+        return [{
+          line: this.error.line - 1,
+          startIndex: this.error.col - 2,
+          endIndex: this.error.col - 1,
+          class: 'error'
+        }]
+      }
     }
   },
   methods: {
