@@ -5279,9 +5279,9 @@ mute-stream@0.0.7:
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.7.tgz#3075ce93bc21b8fab43e1bc4da7e8115ed1e7bab"
   integrity sha1-MHXOk7whuPq0PhvE2n6BFe0ee6s=
 
-"mydistiller-parser@https://gitlab.voidcloud.de/henkelmax/mydistiller-parser.git":
+"mydistiller-parser@https://github.com/myDistiller/myDistiller-parser.git":
   version "1.0.0"
-  resolved "https://gitlab.voidcloud.de/henkelmax/mydistiller-parser.git#65eec5d8902764fef037ca947225f996c44d622a"
+  resolved "https://github.com/myDistiller/myDistiller-parser.git#5266dc1b5d5c8b9d03acf4afa34435601d1a8528"
   dependencies:
     escape-string-regexp "^2.0.0"
     regexp-tree "^0.1.14"
