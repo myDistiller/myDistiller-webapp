@@ -136,6 +136,7 @@ export default {
       }
     },
     distillerPatterns (val) {
+      if (!val) this.error = null
       localStorage.setItem('distiller_patterns', val)
     },
     sampleData (val) {
