@@ -168,7 +168,7 @@ export default {
       try {
         return apply(this.distillerRegex, this.sampleData)
       } catch (err) {
-        console.log(err)
+        // console.log(err)
       }
       return null
     },

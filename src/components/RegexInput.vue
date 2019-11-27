@@ -65,7 +65,7 @@ export default {
 
         deep(tree.body)
       } catch (err) {
-        console.log(err)
+        // console.log(err)
       }
       result = result
         .map((e, i) => {
