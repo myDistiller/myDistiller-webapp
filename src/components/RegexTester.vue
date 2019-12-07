@@ -48,7 +48,7 @@ export default {
       if (!this.regex || !this.sampleData) return
       let result = []
       try {
-        let regex = new RegExp(this.regex, 'g')
+        let regex = new RegExp(this.regex, 'gu')
         let lines = this.sampleData.split('\n')
         lines.forEach((line, index) => {
           let match

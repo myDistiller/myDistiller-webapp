@@ -21,7 +21,7 @@ export default {
   computed: {
     error () {
       try {
-        (new RegExp(this.value, 'g')).exec('')
+        (new RegExp(this.value, 'gu')).exec('')
       } catch (err) {
         let error = err.message.split(': ')
         error.shift()
@@ -34,7 +34,7 @@ export default {
       if (!this.value) return
       let result = []
       try {
-        let tree = regexpTree.parser.setOptions({ captureLocations: true }).parse(new RegExp(this.value, 'g'))
+        let tree = regexpTree.parser.setOptions({ captureLocations: true }).parse(new RegExp(this.value, 'gu'))
 
         let deep = (child) => {
           if (child.loc) {
