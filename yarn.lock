@@ -5282,7 +5282,7 @@ mute-stream@0.0.7:
 
 "mydistiller-parser@https://github.com/myDistiller/myDistiller-parser.git":
   version "1.0.0"
-  resolved "https://github.com/myDistiller/myDistiller-parser.git#904d7376991818c1caa3ff3e4ab221693a9a37fd"
+  resolved "https://github.com/myDistiller/myDistiller-parser.git#4512775f315b787b65030969d99cd4b23bc0da99"
   dependencies:
     escape-string-regexp "^2.0.0"
     regexp-tree "^0.1.14"
