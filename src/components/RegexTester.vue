@@ -10,10 +10,12 @@
       </svg>
     </div>
     <div id="regex-tester">
-      <h1>Regular expression</h1>
-      <RegexInput v-model="regex" style="margin-bottom: 10px;" />
+      <div>
+        <h1>Regular expression</h1>
+        <RegexInput v-model="regex" style="margin-bottom: 10px;" />
+      </div>
       <h1>Test string</h1>
-      <HighlightTextArea id="testArea" :value="sampleData" :highlightData="highlightData" @input="v => sampleData = v"/>
+      <HighlightTextArea id="testArea" style="max-height: 55%;" :value="sampleData" :highlightData="highlightData" @input="v => sampleData = v"/>
     </div>
   </div>
 </template>

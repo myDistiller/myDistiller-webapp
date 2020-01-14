@@ -20,7 +20,7 @@
               </svg>
             </span>
           </div>
-          <HighlightTextArea id="testArea" :value="sampleData" @input="v => sampleData = v"/>
+          <HighlightTextArea id="testArea" style="max-height: 50%;" :value="sampleData" @input="v => sampleData = v"/>
         <!-- </div> -->
       </div>
       <div class="output-container" :style="{ right: (outputVisible) ? '0' : 'calc(-40% + 24px)' }">

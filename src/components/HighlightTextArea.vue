@@ -1,5 +1,5 @@
 <template>
-  <div ref="container" class="highlight-textarea-container" @mouseenter="showScrollbar" @mouseleave="hideScrollbar">
+  <div ref="container" style="height: 100%;" class="highlight-textarea-container" @mouseenter="showScrollbar" @mouseleave="hideScrollbar">
     <codemirror ref="textarea" :class="{ 'single-line': singleLine }" :value="value" @input="v => valueCache = v" :options="cmOptions" @beforeChange="(cm, changeObj) => { if (singleLine) preventMultiline(cm, changeObj) }"></codemirror>
   </div>
 </template>

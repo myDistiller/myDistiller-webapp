@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <HighlightTextArea :lineNumbers="true" :breakAll="true" :value="value" :highlightData="highlightData" @input="v => $emit('input', v)" style="height: 400px;"/>
+  <div style="height: 100%; max-height: 30%;">
+    <HighlightTextArea :lineNumbers="true" :breakAll="true" :value="value" :highlightData="highlightData" @input="v => $emit('input', v)" style="height: 100%;"/>
   </div>
 </template>
 
