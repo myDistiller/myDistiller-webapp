@@ -1,6 +1,7 @@
-import { app, protocol, BrowserWindow } from 'electron'
+import { app, protocol, nativeImage, BrowserWindow } from 'electron'
 import { createProtocol } from 'vue-cli-plugin-electron-builder/lib'
 import installExtension, { VUEJS_DEVTOOLS } from 'electron-devtools-installer'
+import path from 'path'
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
 let win
@@ -13,6 +14,7 @@ function createWindow() {
   win = new BrowserWindow({
     width: 1200,
     height: 720,
+    icon: nativeImage.createFromPath(path.join(__dirname, 'build', 'icon.ico')),
     webPreferences: {
       nodeIntegration: false
     }
