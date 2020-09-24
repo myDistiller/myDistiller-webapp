@@ -1,0 +1,35 @@
+name: Build
+
+on:
+  release:
+    types: 
+      - created
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - name: Build website
+        run: |
+          yarn install --non-interactive
+          yarn build
+      - name: Install SSH client
+        uses: webfactory/ssh-agent@v0.2.0
+        with:
+          ssh-private-key: ${{ secrets.DEPLOY_KEY }}
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@3.5.9
+        with:
+          SSH: true
+          REPOSITORY_NAME: mydistiller/mydistiller.github.io
+          BRANCH: master
+          FOLDER: dist
+          CLEAN: true
+          CLEAN_EXCLUDE: '["CNAME", ".gitattributes"]'
+          SINGLE_COMMIT: true
