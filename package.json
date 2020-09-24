@@ -1,31 +1,27 @@
 {
   "name": "mydistiller",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build": "vue-cli-service build"
   },
   "dependencies": {
-    "core-js": "^3.1.2",
+    "core-js": "^3.6.5",
     "mydistiller-parser": "https://github.com/myDistiller/myDistiller-parser.git",
-    "regexp-tree": "^0.1.14",
+    "regexp-tree": "^0.1.21",
     "resize-observer-polyfill": "^1.5.1",
-    "vue": "^2.6.10",
+    "vue": "^2.6.12",
     "vue-codemirror": "^4.0.6",
-    "vue-json-component": "^0.3.0",
+    "vue-json-component": "^0.4.1",
     "vue-perfect-scrollbar": "^0.2.0",
     "xml-js": "^1.6.11"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.0.0",
-    "@vue/cli-plugin-eslint": "^4.0.0",
-    "@vue/cli-service": "^4.0.0",
-    "@vue/eslint-config-standard": "^4.0.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.6.10"
+    "@vue/cli-plugin-babel": "^4.5.6",
+    "@vue/cli-service": "^4.5.6",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "vue-template-compiler": "^2.6.12"
   }
 }
