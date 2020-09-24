@@ -5,9 +5,6 @@ on:
     types: 
       - created
 
-env:
-  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
 jobs:
   release:
     runs-on: ${{ matrix.os }}
@@ -25,8 +22,10 @@ jobs:
           node-version: 12
       - name: Build Electron app
         uses: samuelmeuli/action-electron-builder@v1
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           use_vue_cli: true
           skip_build: true
-          github_token: GH_TOKEN
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           release: true
